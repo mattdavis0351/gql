@@ -3,12 +3,12 @@ on: [page_build, workflow_dispatch]
 
 jobs:
   grade-learner:
-    if: github.event_name == "page_build"
+    if: github.event_name == 'page_build'
     runs-on: ubuntu-latest
     steps:
       - run: cat $GITHUB_EVENT_PATH
   help-learner:
-    if: github.event_name == "workflow_dispatch"
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - run: echo "you've helped the learner"
