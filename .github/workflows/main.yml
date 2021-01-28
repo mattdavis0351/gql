@@ -1,0 +1,8 @@
+name: testing
+on: workflow_dispatch
+
+jobs:
+  check-event:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $GITHUB_EVENT_PATH
