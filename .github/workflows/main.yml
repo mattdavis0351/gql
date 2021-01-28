@@ -1,9 +1,14 @@
 name: testing
-on: page_build
+on: [page_build, workflow_dispatch]
 
 jobs:
-  check-event:
+  grade-learner:
+    if: github.event_name == "page_build"
     runs-on: ubuntu-latest
     steps:
-      - run: echo $GITHUB_EVENT_PATH
       - run: cat $GITHUB_EVENT_PATH
+  help-learner:
+    if: github.event_name == "workflow_dispatch"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "you've helped the learner"
