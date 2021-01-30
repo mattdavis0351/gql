@@ -11,4 +11,4 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
-      - run: echo "you've helped the learner"
+      - uses: githubtraining/check-pages-action@major-refactor
