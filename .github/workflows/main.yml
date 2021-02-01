@@ -22,4 +22,4 @@ jobs:
         uses: githubtraining/looking-glass-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          feedback: ${{ steps.pages.report }}
+          feedback: ${{ steps.pages.outputs.report }}
