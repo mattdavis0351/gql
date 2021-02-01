@@ -1,4 +1,4 @@
-name: testing
+name: Grade Pages Activity
 on: [page_build, workflow_dispatch]
 
 jobs:
